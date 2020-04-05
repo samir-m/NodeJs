@@ -1,0 +1,23 @@
+<%- include('layouts/header') %>
+</head>
+<body>
+    <%- include('layouts/nav') %>
+    <div class="container">
+         <div class="row mt-4">
+            <% for(let photo of photos)
+            {%>
+                <div class="col-md-3 mb-4">
+                    <div class="gallery">
+                        <img class="img-fluid p-2" src="<%= photo.url %>" alt="<%= photo.title %>">
+                        <div class="card-body">
+                             <h5 class="card-title"><%= photo.category %></h5>
+                             <p class="card-text"><%= photo.title %></p>
+                        </div>
+                    </div>
+                </div>
+            <%}
+            %>
+        </div>
+    </div>
+    <%- include('layouts/bottom'); %>
+ 

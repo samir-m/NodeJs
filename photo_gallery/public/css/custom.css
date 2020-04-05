@@ -1,0 +1,14 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: #eeeeee;
+}
+.navbar-nav .nav-link {
+  font-size: 0.85rem;
+}
+.category-box {
+  margin-top: 20px;
+}
+.gallery {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+}

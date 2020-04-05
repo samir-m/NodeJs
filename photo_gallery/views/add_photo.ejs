@@ -1,0 +1,36 @@
+<%- include('layouts/header'); -%>
+  </head>
+  <body>
+    <%- include('layouts/nav'); -%>
+    <div class="container-fluid">
+      <div class="row justify-content-center align-content-center">
+        <div class="col-md-3 category-box py-4">
+          <form method="post" action="/addPhoto">
+            <label><small>Select category</small></label>
+            <select name="category" class="form-control form-control-sm" required>
+              <% for(let cats of category ) { %>
+              <option><%= cats.category %></option>
+              <% } %>
+            </select>
+            <br />
+            <label><small>Title</small></label>
+            <input
+              class="form-control form-control-sm"
+              name="title"
+              type="text"
+              required
+            /><br />
+            <label><small>Image URL</small></label>
+            <input
+              class="form-control form-control-sm"
+              name="photo"
+              type="text"
+              required
+            /><br />
+
+            <button class="btn btn-info btn-sm" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <%- include('layouts/bottom'); -%>
